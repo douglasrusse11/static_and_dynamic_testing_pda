@@ -7,12 +7,10 @@ class TestCardGame(unittest.TestCase):
     def setUp(self):
         self.card_game = CardGame()
     
-    @unittest.skip('')
     def test_check_for_ace_returns_true(self):
         self.card = Card(1,1)
         self.assertTrue(self.card_game.check_for_ace(self.card))
 
-    @unittest.skip('')
     def test_check_for_ace_returns_false(self):
         self.card = Card(1, 2)
         self.assertFalse(self.card_game.check_for_ace(self.card))
