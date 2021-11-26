@@ -30,16 +30,14 @@ class TestCardGame(unittest.TestCase):
         self.card2 = Card(0, 7)
         self.assertEqual(self.card2, self.card_game.highest_card(self.card1, self.card2))
 
-    @unittest.skip('')
     def test_cards_total_empty_list_returns_zero(self):
         self.cards = []
-        self.assertEqual(0, self.card_game.cards_total(self.cards))
+        self.assertEqual("You have a total of 0", self.card_game.cards_total(self.cards))
     
-    @unittest.skip('')
     def test_cards_total(self):
         self.card1 = Card(2, 10)
         self.card2 = Card(0, 4)
         self.card3 = Card(3, 7)
         self.card4 = Card(0, 9)
         self.cards = [self.card1, self.card2, self.card3, self.card4]
-        self.assertEqual(30, self.card_game.cards_total(self.cards))
+        self.assertEqual("You have a total of 30", self.card_game.cards_total(self.cards))
